@@ -1,0 +1,301 @@
+/* INF222_FINALS_USMAN_JERSEY */
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Side Navigation styles */
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f8f8f8;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+}
+
+.sidenav .title {
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 20px; /* Add left padding */
+}
+
+.sidenav .logo {
+    width: 180px;
+    height: 100px; /* Increased height of the logo */
+    margin-bottom: 20px; /* Adjusted margin for spacing */
+}
+
+.sidenav .nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px; /* Adjusted top margin */
+}
+
+.sidenav .nav-list li {
+    padding: 10px 20px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold; /* Make text bold */
+}
+
+.sidenav .nav-list li:hover {
+    background-color: #ddd;
+}
+
+.sidenav .hours-text {
+    font-size: 12px;
+    color: #555;
+}
+
+.sidenav .category {
+    padding: 10px 20px;
+    color: #333;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold; /* Make text bold */
+}
+
+.sidenav .map-container {
+    text-align: center;
+    margin-top: 20px; /* Adjusted top margin */
+    margin-bottom: 20px; /* Adjusted bottom margin */
+}
+
+.sidenav .map-image {
+    width: 180px; /* Adjusted width of the map image */
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+/* Main Content styles */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Column layout for video and cards */
+    align-items: center; /* Center items horizontally */
+}
+
+.video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+video {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1500px; /* Limit width for responsiveness */
+}
+
+
+.card {
+    flex: 1; /* Consume remaining space */
+    margin-left: 20px; /* Space between cards */
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    position: relative; /* Position relative for absolute positioning of step number */
+}
+
+.card:hover {
+    background-color: #b3d7ff; /* Light blue background on hover */
+}
+
+.blue-card {
+    background: linear-gradient(to bottom, #3780d2, #033468);
+    /* Adjust gradient colors and direction as needed */
+}
+
+.red-card {
+    background: linear-gradient(to bottom, #c94d57, #7b0808);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.red-card.blue-background {
+    background-color: #007bff; /* Blue background when toggled */
+}
+
+.red-card .definition {
+    margin-top: 20px;
+    color: white; /* Default text color */
+}
+
+.red-card.blue-background .definition {
+    color: black; /* Text color to black */
+    font-weight: bold; /* Font weight to bold */
+}
+
+.poke-title {
+    display: flex;
+    align-items: center;
+}
+
+.poke-title h2 {
+    margin-top: 0;
+    margin-right: 10px; /* Add space between Poke title and image */
+    font-size: 4em; /* Increase font size for Poke your way text */
+}
+
+.pronunciation-img {
+    width: 500px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 10px; /* Add space between image and text */
+}
+
+.card h2 {
+    margin-top: 0;
+}
+.card .step {
+    margin-top: 30px; /* Increased margin top */
+    cursor: pointer; /* Add cursor pointer for hover effect */
+    position: relative; /* Ensure relative positioning */
+}
+
+.card .step ul {
+    padding: 0;
+    padding-left: 5px;
+    display: none; /* Hide ul initially */
+    white-space: nowrap; /* Prevent wrapping of list items */
+}
+
+.card .step:hover ul {
+    display: block; /* Display ul on hover */
+}
+
+.card ul li {
+    list-style-type: none;
+    display: inline; /* Display list items inline */
+}
+
+.card ul li:not(:last-child)::after {
+    content: ", "; /* Add comma and space after each list item */
+}
+
+.card .definition {
+    margin-top: 20px;
+    color: white;
+}
+
+.card .definition p {
+    margin: 5px 0;
+}
+
+.card img {
+    width: 20px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.card button {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%; /* Make it circular */
+    width: 40px; /* Adjust width */
+    height: 40px; /* Adjust height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.card button img {
+    width: 24px; /* Adjust size of the icon */
+    height: 24px;
+}
+
+.blue-text {
+    background-color: #007bff;
+    color: black;
+    font-weight: bold;
+}
+
+.card .step-number {
+    position: absolute;
+    left: -30px; /* Adjust position */
+    top: -10px; /* Adjust position */
+    background-color: white; /* Circle background color */
+    color: #007bff; /* Text color */
+    border: 2px solid #0056b3; /* Blue border */
+    width: 30px; /* Circle width */
+    height: 30px; /* Circle height */
+    border-radius: 50%; /* Make it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1em; /* Adjust font size as needed */
+}
+
+/* Contact Form styles */
+#contact-form {
+    max-width: 1500px;
+    width: 98%;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #bad2f0;
+    }
+
+#contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #585353;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact-form button {
+    background: linear-gradient(to right, #0056b3, #dc3545);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background: linear-gradient(to right, #dc3545, #0056b3);
+}

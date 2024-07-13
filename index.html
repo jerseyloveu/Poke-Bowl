@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finals</title>
+    <link rel="stylesheet" href="finalscss.css">
+    <script defer src="finalsjs.js"></script>
+</head>
+<body>
+    <div class="sidenav">
+        <h1 class="title">
+            <img src="logo.png" alt="Logo" class="logo">
+        </h1>
+        <ul class="nav-list">
+            <li>About Us</li>
+            <li>Menu</li>
+            <li>Catering</li>
+            <li>Hours</li>
+            <li class="hours-text">Mon to Fri 11 am - 10 pm</li>
+            <li class="hours-text">Sat 12 pm - 1 am</li>
+            <li class="hours-text">Sun 12 pm - 9 pm</li>
+        </ul>
+        <h2 class="category">Locations</h2>
+        <div class="map-container">
+            <img src="map.png" alt="Map" class="map-image">
+        </div>
+        <h2 class="category" id="contact-us">Contact Us</h2>
+    </div>
+    <div class="main-content">
+        <div class="video-container">
+            <video controls autoplay volume="100" loop width="600" height="200">
+                <source src="video.webm" type="video/webm">
+            </video>
+        </div>
+        <div class="card-container">
+            <div class="card blue-card">
+                <h2 style="font-size: 3em;" align="center">Poke your way</h2>
+                <div class="step hoverable">
+                    <span class="step-number">1</span>
+                    <h2>Choose your protein</h2>
+                    <ul>
+                        <li>Salmon</li>
+                        <li>Tuna</li>
+                        <li>Tofu</li>
+                    </ul>
+                </div>
+                <div class="step hoverable">
+                    <span class="step-number">2</span>
+                    <h2>Pick your base</h2>
+                    <ul>
+                        <li>Rice</li>
+                        <li>Quinoa</li>
+                        <li>Soba noodles</li>
+                    </ul>
+                </div>
+                <div class="step hoverable">
+                    <span class="step-number">3</span>
+                    <h2>Select your marinade</h2>
+                    <ul>
+                        <li>Ponzu</li>
+                        <li>Sriracha aioli</li>
+                        <li>Sesame miso</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card red-card">
+                <div class="poke-title">
+                    <h2 style="font-size: 4em;">Poke</h2>
+                    <h2 style="font-size: 2em;">(/po <span class="diacritic">ˈ</span>kā/)</h2>
+                    <img src="pronounciation.png" width="10000000p" height="100000000" alt="Pronunciation">
+                </div>
+                    <div class="definition">
+                        <p><strong>Noun</strong></p>
+                        <p>Pronounced (Po-kay)</p>
+                        <p>A popular Hawaiian dish of marinated diced raw fish served over rice.</p>
+                        <button id="audio-button" audioSrc="poke.mp3">
+                            <img src="sound-dark.png" alt="Audio Button">
+                        </button>
+                    </div>
+            </div>
+        </div>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="contact-number">Contact Number:</label>
+            <input type="tel" id="contact-number" name="contact-number" required>
+    
+            <button type="submit">Submit</button>
+            <div class="definition">
+                <p><strong>INF222_FINALS_USMAN_JERSEY</strong></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
